@@ -24,7 +24,7 @@
     
     <body>
         <header>
-		<h1><a href="#">MyWebApLogo</a></h1>
+		<h1><a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt=""/></a></h1>
             <nav>
                     <li><a href="{% url 'home' %}">Home</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
@@ -33,6 +33,17 @@
         </header>
         
         {% block content %}{% endblock content %}
-        {% block footer %}{% endblock footer %}
+        {% block footer %}
+        <footer>
+		<ul>
+			<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+			<li><a href="#"><i class="fa fa-mobile"></i></a></li>
+			<li><a href="#"><i class="fa fa-github"></i></a></li>
+			<li><a href="#"><i class="fa fa-skype"></i></a></li>
+		</ul>
+		<p>Richard Hill © 2017</p>
+		</footer>
+        {% endblock footer %}
+    
     </body>
 </html>
