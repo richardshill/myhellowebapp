@@ -6,15 +6,19 @@
 {% block content %}
     
 {% load staticfiles %}
+{% load humanize %}
         
 		<section class="hero">
 			<div class="background-image"></div>
 			<h1>The Home of my App</h1>
-			<h3>This is the home page!</h3>
+			 <h3>This is the home page!</h3>
 		</section>
     
-    	<section class="features">
-		<h3 class="title">Features and services</h3>
+    	<section class="features"> 
+       	<h3 class="title">Features and services</h3>
+        
+            <p><h4>{{ number }}</h4></p>
+          
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.</p>
 		<hr>
 
