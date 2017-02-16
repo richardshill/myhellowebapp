@@ -18,6 +18,11 @@
        	<h3 class="title">Features and services</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.</p>
 		<hr>
+        
+    {% for thing in things %}
+    <h2>{{ thing.name }}</h2>
+    <p>{{ thing.description }}</p>
+    {% endfor %}
 
 		<ul class="grid">
 			<li>
@@ -35,7 +40,7 @@
 				<h4>Content Editing</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices vitae pulvinar velit.</p>
 			</li>
-		</div>
+		</ul>
 	</section>
     
         {% block footer %}{% endblock footer %}

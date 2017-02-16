@@ -1,11 +1,11 @@
 from django.shortcuts import render
 
-# Create your views here.
+from collection.models import Audit
 
+# the rewritten view!
 def index(request):
-    # defining the variable
-    number = 6
-    # passing the variable to the view
+    things = Audit.objects.all()
+
     return render(request, 'index.html', {
-        'number': number,
+        'things': things,
     })
